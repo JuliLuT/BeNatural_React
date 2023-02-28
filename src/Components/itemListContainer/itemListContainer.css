@@ -1,0 +1,6 @@
+.greeting {
+    font-family: 'Gotu', sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+}
