@@ -12,15 +12,15 @@ function navBar() {
             <Nav className="me-auto ">
               <Nav.Link href="#home">Inicio</Nav.Link>
               <Nav.Link href="#link" >Cuenta</Nav.Link>
-              <NavDropdown title="Productos" id="basic-nav-dropdown" className='menu'>
-                <NavDropdown.Item href="#action/3.1" className='menu'>Serums</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2" className='menu'>
+              <NavDropdown className='drop' title="Productos" id="basic-nav-dropdown">
+                <NavDropdown.Item className='drop' href="#action/3.1" >Serums</NavDropdown.Item>
+                <NavDropdown.Item className='drop' href="#action/3.2" >
                   Cremas hidratantes
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3" className='menu'>Protectores Solares</NavDropdown.Item>
-                <NavDropdown.Divider />
+                <NavDropdown.Item className='drop' href="#action/3.3" >Protectores Solares</NavDropdown.Item>
+                
               </NavDropdown>
-              <div><CartWidget></CartWidget></div>
+              <Nav.Link><CartWidget></CartWidget></Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
