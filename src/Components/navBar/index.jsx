@@ -12,7 +12,6 @@ function navBar() {
             <Nav className="me-auto ">
               <Nav.Link href="#home">Inicio</Nav.Link>
               <Nav.Link href="#link" >Cuenta</Nav.Link>
-              <div><CartWidget></CartWidget></div>
               <NavDropdown title="Productos" id="basic-nav-dropdown" className='menu'>
                 <NavDropdown.Item href="#action/3.1" className='menu'>Serums</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2" className='menu'>
@@ -20,10 +19,8 @@ function navBar() {
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3" className='menu'>Protectores Solares</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4" className='menu'>
-                  Accesorios
-                </NavDropdown.Item>
               </NavDropdown>
+              <div><CartWidget></CartWidget></div>
             </Nav>
           </Navbar.Collapse>
         </Container>

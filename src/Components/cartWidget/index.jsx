@@ -1,7 +1,7 @@
-function cartWidget() {
+function CartWidget() {
     return <div>
-     <i class="fa-light fa-cart-shopping"></i>
+      <p className="cart">🛒(4)</p>
     </div>;
   }
   
-  export default cartWidget;
+  export default CartWidget;
