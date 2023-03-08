@@ -1,14 +1,17 @@
-.cont{
+.cont {
     background-color: rgb(247, 210, 216);
 }
-.title{
+
+.title {
     font-family: 'Gotu', sans-serif;
 }
-.menu{
+
+.menu {
     font-family: 'Nanum Gothic', sans-serif;
     font-size: 14px;
 }
-.me-auto{
+
+.me-auto {
     font-family: 'Nanum Gothic', sans-serif;
-    font-size: 14px;  
+    font-size: 14px;
 }

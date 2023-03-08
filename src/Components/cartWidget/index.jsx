@@ -1,7 +1,8 @@
+
 function CartWidget() {
-    return <div>
-      <p>🛒(4)</p>
-    </div>;
-  }
-  
-  export default CartWidget;
+  return <div>
+    <p className="cart">🛒(4)</p>
+  </div>;
+}
+
+export default CartWidget;
