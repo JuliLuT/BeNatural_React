@@ -5,7 +5,6 @@ import Col from 'react-bootstrap/Col';
 function Item({product}) {
     return ( 
       <Row xs={1} md={2} className="g-4">
-        {Array.from({ length: 4 }).map((_, idx) => (
       <Col >
       <Card  style={{ width: '18rem' }}>
       <Card.Img variant="top" src= {product.image} />
@@ -21,7 +20,6 @@ function Item({product}) {
       </Card.Body>
     </Card>
     </Col>
-       ))}
     </Row>
     );
   }
