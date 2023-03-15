@@ -3,7 +3,7 @@ export default [
     id: 1,
     name: "Serum VitaC",
     description:
-      "Ideal para pieles sin brillo y marcas de acné. Mejora visiblemente la piel en dos semanas",
+      " El sérum VitaC 10 de la Roche Posay es un antioxidante co-creado con dermatológos para una piel radiante. Beneficios: Aporta luminosidad a la piel, corrige y unifica el tono, disminuye las líneas finas y las arrugas, absorbe rápidamente. Incluso para las pieles más sensibles. Modo de uso: Aplicar después de la higiene sobre el rostro y el cuello por la mañana y/o la noche.",
     image: "/serumA.jpg",
     price: 4500,
     category: "serum",
@@ -11,16 +11,16 @@ export default [
   {
     id: 2,
     name: "Serum Acido hialuronico",
-    description: "Suaviza las primeras marcas de la edad",
+    description: "Es el primer tratamiento antiarrugas con máxima tolerancia en pieles sensibles, y máxima eficacia antiedad. Beneficios: Rellena las arrugas y promueve la producción de colágeno gracias al ácido hialurónico, y además contiene Vitamina B para disminuir la inflamación, madecassoide para reparar la barrera de la piel, y agua termal. Rellena, repara las arrugas y regenera la piel sensible. Para las pieles más sensibles y sensibilizadas. Su uso es apto post tratamientos quirúrgicos a partir del cuarto día. Su textura es Aquagel hidratante rellenadora. Modo de uso: Aplicar por la noche sobre rostro, cuello y escote. Todo tipo de piel.",
     image: "/serumB.jpg",
     price: 3500,
     category: "serum",
   },
   {
     id: 3,
-    name: "Serum Niacinamida",
+    name: "Pure Niacinamide",
     description:
-      "Para pieles con acné. Elimina grasitud de la piel y marcas de la misma",
+      "Pure Niacinamide 10 Sérum Antimanchas es un sérum concentrado con una potente acción despigmentante, que repara e ilumina la piel del rostro. Un tratamiento despigmentante con 10% de niacinamida, para combatir las manchas y las reacciones cutáneas producidas por la hipersensibilidad, reduciendo marcas e imperfecciones, iluminando y unificando el tono de la piel. Contiene ácido hialurónico para reparar la barrera cutánea. Textura ligera no grasa. Modo de uso: Aplicar mañana y noche sobre rostro, cuello y escote. Apto para su uso en manos. Evitar el contacto con los ojos.",
     image: "/serumC.jpg",
     price: 5000,
     category: "serum",

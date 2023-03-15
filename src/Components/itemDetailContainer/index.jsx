@@ -7,7 +7,7 @@ function ItemDetailContainer({ productDetail }) {
 
   useEffect(() => {
     const detail = products.find(
-      (product) => product.id == productDetail
+      (product) => product.id === parseInt(productDetail) 
     );
     setoneProduct(detail);
   }, [productDetail]);

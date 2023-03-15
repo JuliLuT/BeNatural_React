@@ -14,8 +14,9 @@ function ItemDetail({product=productsList}) {
         <img src={product.image} />
       </div>
       <div className="description">
+        <h3 className="title">{product.name} </h3>
         <p>{product.description}</p>
-        <p>{product.price}</p>
+        <p className="price">$ {product.price}</p>
         <div className="fotterDesc">
           <button
             className="normalButton"
