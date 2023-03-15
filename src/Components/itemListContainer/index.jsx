@@ -22,7 +22,7 @@ function ItemListContainer({ category, categoryExists }) {
       })
 
       .catch((error) => console.log(error));
-  }, [categoryExists]);
+  }, [categoryExists, category]);
   console.log({ products });
   return (
     <div>
