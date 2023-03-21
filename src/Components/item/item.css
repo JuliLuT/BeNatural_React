@@ -14,7 +14,6 @@
   background-color: rgb(253, 182, 195);
   border: 1px solid rgb(253, 200, 100);
 }
-.cardGroup{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.card{
+  margin: 5px;
 }

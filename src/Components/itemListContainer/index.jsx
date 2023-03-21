@@ -1,4 +1,3 @@
-import "./itemListContainer.css";
 import ItemList from "../itemList";
 import { useEffect, useState } from "react";
 import productsList from "../mocks/productsList";
@@ -25,9 +24,9 @@ function ItemListContainer({ category, categoryExists }) {
   }, [categoryExists, category]);
   console.log({ products });
   return (
-    <div>
-      <ItemList products={products} />
-    </div>
+   
+        <ItemList products={products} />
+      
   );
 }
 
