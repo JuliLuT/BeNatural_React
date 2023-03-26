@@ -22,7 +22,7 @@ function ItemListContainer({ category, categoryExists }) {
 
       .catch((error) => console.log(error));
   }, [categoryExists, category]);
-  console.log({ products });
+  ;
   return (
    
         <ItemList products={products} />

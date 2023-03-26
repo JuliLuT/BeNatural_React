@@ -1,14 +1,16 @@
 import "./itemDetail.css";
-import React, { useState } from "react";
+import { useState } from "react";
 import productsList from "../mocks/productsList";
+import ItemCount from "../itemCount";
+import { Link } from "react-router-dom";
 
-
-function ItemDetail({product=productsList}) {
-
-  const [quantity, setQuantity] = useState(1);
+function ItemDetail({ product = productsList }) {
+  const [quantity, setQuantity] = useState(0);
+  function add(counter) {
+    setQuantity(counter);
+  }
 
   return (
-
     <div className="content">
       <div className="image">
         <img src={product.image} />
@@ -18,23 +20,16 @@ function ItemDetail({product=productsList}) {
         <p>{product.description}</p>
         <p className="price">$ {product.price}</p>
         <div className="fotterDesc">
-          <button
-            className="normalButton"
-            onClick={() => setQuantity(quantity - 1)}
-          >
-            -
-          </button>
-          <p className="quantity">{quantity}</p>
-          <button
-            className="normalButton"
-            onClick={() => setQuantity(quantity + 1)}
-          >
-            +
-          </button>
-        </div>
-        <div className="compra">
-          <button className="normalButton">Comprar</button>
-          <button className="normalButton">Añadir al carrito</button>
+          <div>
+            {quantity == 0 && <ItemCount add={add} />}
+            <div className="suma">
+              {quantity >= 1 && (
+                <Link to={"/cart"}>
+                  <button className="normalButton">Ir al carrito</button>
+                </Link>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -9,7 +9,7 @@ function ItemList({ products }) {
           <Row>
             {products.map((product, index) => (
               <Item product={product} key={product.id} />
-            ))}{" "}
+            ))}
           </Row>
         </Container>
       </ul>

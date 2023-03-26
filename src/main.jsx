@@ -6,6 +6,7 @@ import ItemDetailContainer from "./Components/itemDetailContainer";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/Root";
 import ItemRoot from "./routes/item";
+import Cart from "./routes/cart";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/cart",
-    element: "",
+    element:<Cart />,
   },
   {
     path: "/checkout",
