@@ -2,11 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ItemDetailContainer from "./Components/itemDetailContainer";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/Root";
 import ItemRoot from "./routes/item";
 import Cart from "./routes/cart";
+import CustomProvider from "./context";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +33,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <CustomProvider>
     <RouterProvider router={router} />
+    </CustomProvider>
   </React.StrictMode>
 );
