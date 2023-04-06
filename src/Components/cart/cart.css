@@ -1,0 +1,27 @@
+.header{
+text-align: center;
+font-family: "Gotu", sans-serif;
+margin-top: 20px;}
+.container{
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    border-bottom: 1px solid pink;
+}
+.producto{
+    display: flex;
+    margin: 10px;
+    align-items: center;
+}
+.img{
+    margin:5px;
+}
+.descripcion{
+    margin: 5px;
+    font-family: "Nanum Gothic", sans-serif;
+}
+.img img{
+    width: 200px;
+    height: 150px;
+    border-radius: 20px;
+}
