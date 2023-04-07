@@ -1,12 +1,11 @@
-import Cart from "../Components/cart";
-import Navbar from "../Components/navBar"
-function cartRoute() {
+import CartComponent from "../Components/cart";
+function Cart() {
     return (
-     <div>
-     <Navbar/>
-     <Cart/>
-     </div>
+      <div>
+        <CartComponent/>
+        <h2>carttttt</h2>
+      </div>
     );
   }
   
-  export default cartRoute;
+  export default Cart;
