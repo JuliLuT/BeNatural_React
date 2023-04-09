@@ -1,20 +1,33 @@
 import ItemDetail from "../ItemDetail";
 import { useEffect, useState } from "react";
-import products from "../mocks/productsList"
+import{doc, getDoc,getFirestore}from "firebase/firestore"
+import { useParams } from "react-router-dom";
+import "./ItemDetailContainer.css"
 
-function ItemDetailContainer({ productDetail }) {
-  const [oneProduct, setoneProduct] = useState({});
-
+function ItemDetailContainer() {
+const[product, setProduct]=useState(null);
+const params= useParams()
   useEffect(() => {
-    const detail = products.find(
-      (product) => product.id === parseInt(productDetail) 
-    );
-    setoneProduct(detail);
-  }, [productDetail]);
+    const db = getFirestore();
+    const itemRef = doc(db, "Items", params.id);
+    
+    getDoc(itemRef)
+    .then((snapshot)=>{
+      if(snapshot.exists()){
+        setProduct({id:snapshot.id,...snapshot.data()})
+      }
+    })
+    .catch((error)=>console.log({error}))
 
+  }, []);
+  if(!product){
+    return  <h2 className="Loading">
+    Cargando producto...
+  </h2>
+  }
   return (
     <div>
-      <ItemDetail product={oneProduct} />
+      <ItemDetail product={product} />
     </div>
   );
 }

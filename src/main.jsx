@@ -8,6 +8,21 @@ import ItemRoot from "./routes/item";
 import Cart from "./Routes/cart";
 import CustomProvider from "./Context";
 
+
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBwRbhAfk8gUn5wHWvA7y7TholXq2REpYg",
+  authDomain: "benatural-1d5de.firebaseapp.com",
+  projectId: "benatural-1d5de",
+  storageBucket: "benatural-1d5de.appspot.com",
+  messagingSenderId: "1057428919973",
+  appId: "1:1057428919973:web:8db97ede8f83b599af9f4c"
+};
+
+const app = initializeApp(firebaseConfig);
+
+
 const router = createBrowserRouter([
   {
     path: "/",
