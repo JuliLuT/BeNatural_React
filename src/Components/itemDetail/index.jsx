@@ -3,7 +3,7 @@ import { useContext, useState } from "react";
 import productsList from "../mocks/productsList";
 import ItemCount from "../itemCount";
 import { Link } from "react-router-dom";
-import { Contexto } from "../../context";
+import { Contexto } from "../../Context";
 
 function ItemDetail({ product = productsList }) {
   const{addInCart}=useContext(Contexto)

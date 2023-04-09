@@ -1,9 +1,10 @@
 import CartComponent from "../Components/cart";
+import NavBar from"../Components/navBar"
 function Cart() {
     return (
       <div>
+        <NavBar/>
         <CartComponent/>
-        <h2>carttttt</h2>
       </div>
     );
   }

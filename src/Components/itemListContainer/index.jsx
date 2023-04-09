@@ -6,7 +6,7 @@ function ItemListContainer({ category, categoryExists }) {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     const showProductsList = new Promise((resolve, reject) =>
-      setTimeout(() => resolve(productsList), 2000)
+      setTimeout(() => resolve(productsList), 500)
     );
     showProductsList
       .then((response) => {

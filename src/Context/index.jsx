@@ -2,8 +2,6 @@ import { createContext, useState } from "react";
 export const Contexto = createContext();
 function CustomProvider({ children }) {
   const [cartProducts, setCartProducts] = useState([]);
-  console.log(cartProducts)
-  
   function addInCart(product, quantity) {
     const isProductAdded = isInCart(product);
     if (isProductAdded) {
@@ -25,14 +23,26 @@ function CustomProvider({ children }) {
       );
     }
   }
-  function removeItem(itemId){}
-  function clear(){}
+    const removeItem = (itemToRemove) => {
+      setCartProducts((prevItems) => prevItems.filter(item => item !== itemToRemove));
+  }
+ 
+  function clear(){
+    setCartProducts([]);
+  }
 
   function isInCart(product) {
     return cartProducts.some((cartProducts) => cartProducts.id === product.id);
   }
+  function getTotalPrice() {
+    let totalPrice = 0;
+    cartProducts.forEach((product) => {
+      totalPrice += product.price * product.quantity;
+    });
+    return totalPrice;
+  }
   return (
-    <Contexto.Provider value={{ cartProducts, addInCart }}>
+    <Contexto.Provider value={{addInCart,cartProducts, clear, removeItem,getTotalPrice }}>
       {children}
     </Contexto.Provider>
   );

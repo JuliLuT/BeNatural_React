@@ -5,8 +5,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/Root";
 import ItemRoot from "./routes/item";
-import Cart from "./routes/cart";
-import CustomProvider from "./context";
+import Cart from "./Routes/cart";
+import CustomProvider from "./Context";
 
 const router = createBrowserRouter([
   {
