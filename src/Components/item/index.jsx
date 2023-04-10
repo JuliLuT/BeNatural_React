@@ -10,6 +10,7 @@ function Item({ product }) {
         <Card.Body>
           <Card.Title>{product.name} </Card.Title>
           <Card.Text>$ {product.price}</Card.Text>
+          <Card.Text>Unidades disponibles: {product.stock}</Card.Text>
           <div className="buttons">
             <button className="normalButton">
               <Link to={`/item/${product.id}`}>Detalle</Link>

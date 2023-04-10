@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import{BsCart3} from "react-icons/bs"
-function ItemCount({ add }) {
+function ItemCount({ stock, add }) {
   const [counter, setCounter] = useState(1);
   return (
     <div className="counterContainer">
@@ -18,6 +18,7 @@ function ItemCount({ add }) {
         <div>
           <button
             className="normalButton"
+            disabled={counter===stock}
             onClick={() => setCounter((prevQuantity) => prevQuantity + 1)}
           >
             +

@@ -10,10 +10,14 @@ import {
 
 function ItemListContainer({ category, categoryExists }) {
   const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const db = getFirestore();
     const itemsCollection = collection(db, "Items");
+
+    setIsLoading(true);
+
     if (categoryExists) {
       const queryResult = query(
         itemsCollection,
@@ -24,17 +28,28 @@ function ItemListContainer({ category, categoryExists }) {
           const docs = snapshot.docs;
           setProducts(docs.map((doc) => ({ id: doc.id, ...doc.data() })));
         })
-        .catch((error) => console.log({ error }));
+        .catch((error) => console.log({ error }))
+        .finally(() => setIsLoading(false));
     } else {
       getDocs(itemsCollection)
         .then((snapshot) => {
           const docs = snapshot.docs;
           setProducts(docs.map((doc) => ({ id: doc.id, ...doc.data() })));
         })
-        .catch((error) => console.log({ error }));
+        .catch((error) => console.log({ error }))
+        .finally(() => setIsLoading(false));
     }
   }, [category]);
-  return <ItemList products={products} />;
+
+  return (
+    <>
+      {isLoading ? (
+        <div className="Loading"></div>
+      ) : (
+        <ItemList products={products} />
+      )}
+    </>
+  );
 }
 
 export default ItemListContainer;

@@ -22,15 +22,19 @@ function ItemDetail({ product = productsList }) {
         <h3 className="title">{product.name} </h3>
         <p>{product.description}</p>
         <p className="price">$ {product.price}</p>
+        <p className="price">Unidades disponibles: {product.stock}</p>
         <div className="fotterDesc">
           <div>
-            {quantity == 0 && <ItemCount add={addProduct} />}
+            {quantity == 0 && <ItemCount stock={product.stock} add={addProduct} />}
             <div className="suma">
               {quantity >= 1 && (
                 <Link to={"/cart"}>
                   <button className="normalButton">Ir al carrito</button>
                 </Link>
               )}
+              <Link to={"/"}>
+            <button className="normalButton">Seguir comprando</button>{" "}
+          </Link>
             </div>
           </div>
         </div>

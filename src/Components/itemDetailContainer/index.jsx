@@ -4,6 +4,7 @@ import{doc, getDoc,getFirestore}from "firebase/firestore"
 import { useParams } from "react-router-dom";
 
 
+
 function ItemDetailContainer() {
 const[product, setProduct]=useState(null);
 const params= useParams()
@@ -21,9 +22,8 @@ const params= useParams()
 
   }, []);
   if(!product){
-    return  <h2 className="Loading">
-    Cargando producto...
-  </h2>
+    return <div className="Loading"></div>
+
   }
   return (
     <div>

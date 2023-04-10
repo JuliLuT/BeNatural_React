@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/Root";
 import ItemRoot from "./routes/item";
 import Cart from "./Routes/cart";
+import CheckOutRoute from "./Routes/checkoutRoute";
 import CustomProvider from "./Context";
 
 
@@ -42,8 +43,8 @@ const router = createBrowserRouter([
   },
   {
     path: "/checkout",
-    element: "",
-  },
+    element: <CheckOutRoute />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

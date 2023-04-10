@@ -4,7 +4,7 @@ import { BsFillTrashFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import "./cart.css";
 function CartComponent() {
-  const { cartProducts, removeItem,getTotalPrice, clear } =
+  const { cartProducts, removeItem,getTotalPrice, clear, sendOrder } =
     useContext(Contexto);
   return (
     <>
@@ -40,7 +40,10 @@ function CartComponent() {
           ))}
           <div className="abonarCompra">
             <p>Total de la compra <span> ${getTotalPrice()}</span> </p>
-            <button className="normalButton">Abonar  </button>
+            <Link to={"/checkout"}><button className="normalButton" onClick={sendOrder}>Abonar  </button></Link>
+            <Link to={"/"}>
+            <button className="normalButton">Seguir comprando</button>{" "}
+          </Link>
           </div>
           <div className="emptyCartContainer">
             <button className="emptyButton" onClick={clear}>

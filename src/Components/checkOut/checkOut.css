@@ -1,0 +1,23 @@
+.formularioCheckout{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+.title{
+    font-family: "Gotu", sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+input{
+    border: none;
+    border-bottom: 1px solid pink;
+    padding: 20px;
+}
+.resumenCompra{
+    display: flex;
+    justify-content: center;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 20px;
+}
